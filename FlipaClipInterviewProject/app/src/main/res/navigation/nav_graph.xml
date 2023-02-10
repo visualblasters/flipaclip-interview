@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/brushesFragment">
+
+    <fragment
+        android:id="@+id/brushesFragment"
+        android:name="com.flipaclip.interview.presentation.brushes.BrushesFragment"
+        android:label="BrushesFragment" >
+        <action
+            android:id="@+id/brush_to_settings"
+            app:destination="@id/brushSettingsFragment" >
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/brushSettingsFragment"
+        android:name="com.flipaclip.interview.presentation.brushes.BrushSettingsFragment"
+        android:label="BrushSettingsFragment">
+        <argument
+            android:name="brushID"
+            app:argType="string" />
+    </fragment>
+
+</navigation>

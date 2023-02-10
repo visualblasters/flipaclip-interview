@@ -1,14 +1,15 @@
 package com.flipaclip.interview.data
 
 import kotlinx.coroutines.flow.MutableStateFlow
-import java.util.concurrent.Flow
 
 class BrushRepository {
-    var brushesFlow = MutableStateFlow(listOf(
-        Brush("brush.id.pen", "Pen", 20),
-        Brush("brush.id.airbrush", "Airbrush", 40),
-        Brush("brush.id.sketch", "Sketch", 12)
-    ))
+    var brushesFlow = MutableStateFlow(
+        listOf(
+            Brush("brush.id.pen", "Pen", 20),
+            Brush("brush.id.airbrush", "Airbrush", 40),
+            Brush("brush.id.sketch", "Sketch", 12)
+        )
+    )
     var selectedBrush = brushesFlow.value.first().id
 
     companion object {
